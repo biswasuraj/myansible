@@ -1,0 +1,16 @@
+---
+- hosts: 3.16.163.62
+  become: yes
+  tasks: 
+  - name: install Mariadb
+    yum: 
+      name=mariadb-server
+      state=latest
+    tags: 
+    - install
+  - name: start the service
+    service: 
+      name=mariadb
+      state=started 
+    tags:
+     - start

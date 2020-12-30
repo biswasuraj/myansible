@@ -1,0 +1,16 @@
+---
+- hosts: linux
+  vars: 
+    games:
+       baseball: 11player
+       cricket: 2player
+       badminton: 4Player
+  tasks: 
+   - name: print variable
+     debug: 
+        msg: "{{ games.baseball }}"
+        
+ 
+
+
+

@@ -1,0 +1,11 @@
+---
+- hosts: linux
+  vars: 
+    test: hello ansible
+  tasks: 
+   - name: print variable
+     debug: 
+        msg: "{{ test }}"
+
+
+

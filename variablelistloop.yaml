@@ -1,0 +1,19 @@
+---
+- hosts: linux
+  vars: 
+    games:
+      - baseball
+      - cricket
+      - badminton
+      - skating
+  tasks: 
+   - name: print variable
+     debug: 
+        msg: "{{ item }}"
+     with_items:
+       - "{{ games }}"
+
+ 
+
+
+

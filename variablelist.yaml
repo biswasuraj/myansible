@@ -1,0 +1,15 @@
+---
+- hosts: linux
+  vars: 
+    games:
+      - baseball
+      - cricket
+      - badminton
+      - skating
+  tasks: 
+   - name: print variable
+     debug: 
+        msg: "{{ games [1] }}"
+
+
+
